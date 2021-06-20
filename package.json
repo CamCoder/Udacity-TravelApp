@@ -1,0 +1,28 @@
+{
+  "name": "travel-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CamCoder/Udacity-TravelApp.git"
+  },
+  "author": "Cameron Stevenson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CamCoder/Udacity-TravelApp/issues"
+  },
+  "homepage": "https://github.com/CamCoder/Udacity-TravelApp#readme",
+  "devDependencies": {
+    "sass": "^1.35.1"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "autoprefixer": "^10.2.6",
+    "bootstrap": "^5.0.1",
+    "postcss-cli": "^8.3.1"
+  }
+}
