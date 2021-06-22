@@ -1,0 +1,5 @@
+@use './custom';
+@forward "~bootstrap" with(
+    $primary: custom.$primary
+);
+
