@@ -4,8 +4,11 @@
     background: linear-gradient(to right, rgba($primary,0.95), rgba($secondary,0.95));
 
     div{
-        .h1{
+        .logo-custom{
             color: $white;
+            &:hover {
+                color: $white;
+            }
         }
     }
 }
