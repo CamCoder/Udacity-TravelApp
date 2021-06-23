@@ -8,6 +8,8 @@
 
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <!-- START NAVBAR SECTION -->
@@ -32,7 +34,7 @@
             </span>
           </h1>
         </div>
-        <!-- START THE CONTENT FOR FORM -->
+        <!-- START THE CONTENT FOR IMG-->
         <div class="col-md-6 align-items-center intros">
           <img src="/src/client/views/img/wings.png" alt="logo image" class="img-fluid logo-intro">
         </div>
@@ -41,7 +43,46 @@
   </section>
   <!-- END INTRO SECTION -->
 
+  <!-- START FORM -->
+  <section class="form-section">
+    <div id="box" class="container shadow-lg">
+      <div class="row">
+        <div class="col-md-6">
+          <div id="img"></div>
+        </div>
+        <div class="col-md-6">
+          <h3 class="text-center pt-5 pb-5">Plan your Escape</h3>       
+          <form action="" >
+            <label for="">Location</label>
+            <input type="text">
+            <label for="">Departure</label>
+            <input type="date">
 
+            <button type="button" class="rounded-pill btn-rounded">Book it!
+              <span><i class="fas fa-arrow-right"></i></span>
+            </button>
+          </form>
+        </div>
+ 
+      </div>
+    </div>
+  </section>
+  <!-- END FORM -->
 
+  <!-- START TRIPS SECTION -->
+  <section id="history" class="saved-section">
+    <div class="container">
+
+    </div>
+  </section>
+  <!-- END TRIPS SECTION -->
+
+  <!-- START FOOTER SECTION -->
+  <section id=footer>
+    <div class="container">
+
+    </div>
+  </section>
+  <!-- END FOOTER SECTION -->
 </body>
 </html>

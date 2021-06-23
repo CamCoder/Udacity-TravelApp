@@ -1,0 +1,22 @@
+@use './custom' as *;
+@use './mixins' as *;
+
+.form-section{
+    padding: 5rem 0;
+}
+#img{
+    height: 500px;
+    width: 100%;
+    background: black;
+}
+
+#box{
+    background: white;
+
+    .row > *{
+        padding-left: 0;
+    }
+
+}
+
+// padding left =0

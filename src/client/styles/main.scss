@@ -1,10 +1,18 @@
-@use './custom';
-@forward "~bootstrap" with(
-    $primary: custom.$primary
-);
+@use './custom' as *;
+@forward "~bootstrap" ;
+// with(
+//     $primary: $primary
+// );
+
 
 
 // IMPORT SECTIONS
 @use './navbar';
 @use './typography';
-@use './intro-section'
+@use './intro-section';
+@use './form-section';
+@use './button';
+
+body{
+    background-color: $gray-200;
+}
