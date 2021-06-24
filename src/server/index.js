@@ -24,10 +24,23 @@ app.listen(8082, function () {
 })
 
 const GEO_KEY = process.env.GEO_KEY;
+const WBIT_KEY = process.env.WBIT_KEY;
 
+// API
 app.post('/travel', async (req, res) => {
     console.log(req.body.loc);
     const response = await fetch(`http://api.geonames.org/searchJSON?q=${req.body.loc}&maxRows=1&username=${GEO_KEY}`);
+    try {
+        const data = await response.json();
+        res.send(data)
+    } catch (error) {
+        console.log("Error: ", error)
+    }
+} )
+
+app.post('/weather', async (req, res) => {
+
+    const response = await fetch(`https://api.weatherbit.io/v2.0/forecast/daily?lat=${req.body.lat}&lon=${req.body.lng}&units=I&days=7&key=${WBIT_KEY}`);
     try {
         const data = await response.json();
         res.send(data)
