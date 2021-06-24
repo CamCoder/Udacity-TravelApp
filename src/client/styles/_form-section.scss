@@ -19,4 +19,12 @@
 
 }
 
-// padding left =0
+.entry{
+    margin-top: 2rem ;
+    text-align: center;
+    
+    input:focus{
+        outline: none !important;
+        border:3px solid $primary;
+    }
+}
