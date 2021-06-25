@@ -41,10 +41,11 @@ function getInfo(){
         .then(res => res.json())
         .then(function(res){
             handleDate(date);
+            console.log("date: ", date);
 
             if(res.geonames[0].countryCode == "US"){
                 addToLocalStorageArray(tripCount,[ res.geonames[0].toponymName,
-                    res.geonames[0].adminName1, res.geonames[0].countryName]);
+                    res.geonames[0].adminName1]);
 
                 // localStorage.setItem(tripCount,[ res.geonames[0].toponymName,
                 // res.geonames[0].adminName1, res.geonames[0].countryName])

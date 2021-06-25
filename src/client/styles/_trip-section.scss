@@ -1,31 +1,39 @@
 @use './custom' as *;
 @use './mixins' as *;
 
-.card{
-    width: 600px;
-    height: 400px;
-    @include gradient;
-    border-top: 0;
-    border-bottom: 0;
+#history{
+    .container{
+        background: $white;
+        margin-bottom: 5rem;
+    }
 }
 
+
 .card-top{
-width: 100%;
-height: 60%;
-display: flex;
-margin-bottom: -1px;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    margin-bottom: -1px;
 }
 
 .card-img{
-width: 40%;
-height: 100%;
-background: red;
+    width: 40%;
+    height: 100%;
+    background: black;
 }
 
 .card-info{
-width: 60%;
-height: 100%;
-background: white;
+    width: 60%;
+    height: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    p{
+        text-align: center;
+        // font-size: 1rem;
+        font-weight: bold;
+    }
 }
 
 .card-weather{
@@ -33,11 +41,22 @@ background: white;
     width: 100%;
     background: white;
 
+    h4{
+        text-align: center;
+        margin-top: 1rem;
+    }
 
 }
 
 #tripList{
     grid-gap: 2rem;
+    .card{
+        width: 600px;
+        height: 400px;
+        @include gradient;
+        border-top: 0;
+        border-bottom: 0;
+    }
 }
 
 #exit{
@@ -45,4 +64,33 @@ background: white;
     top: 0;
     right: 15px;
     font-size: 3rem;
+}
+
+.forecast{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    img{
+        height: 75px;
+    }
+    p{
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.weather-list{
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    overflow: scroll;
+}
+
+@media (min-width: 768px){
+    .card-info{
+        p{
+            font-size: 1.35rem;
+        }
+    }
 }

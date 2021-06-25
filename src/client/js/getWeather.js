@@ -1,4 +1,5 @@
 import { addToLocalStorageArray } from "./addToLocalStorage"
+import { tripList } from "./tripList";
 
 function getWeather(lat, lng){
 
@@ -19,9 +20,11 @@ function getWeather(lat, lng){
         .then(res => res.json())
         .then(function(res){
             
-            console.log("NEW:")
-            console.log(res.data)
-            // console.log(res.geonames[0].lng)
+            for(let x = 0; x<7;  x++){
+                addToLocalStorageArray(tripCount,[res.data[x].weather.icon, res.data[x].high_temp, res.data[x].low_temp])
+
+            }
+            tripList();
         })        
     }
     else{
@@ -38,6 +41,7 @@ function getWeather(lat, lng){
             
             console.log("History:")
             console.log(res)
+            // tripList();
         })
     }
 }
