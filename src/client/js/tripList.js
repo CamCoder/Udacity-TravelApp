@@ -1,0 +1,5 @@
+function tripList(){
+    
+}
+
+export {tripList}

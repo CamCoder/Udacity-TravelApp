@@ -19,6 +19,7 @@ function handleDate(d){
     }else{
         console.log("Next week");
     }
+    
 
 }
 
