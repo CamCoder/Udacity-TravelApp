@@ -62,4 +62,8 @@ app.post('/weatherHistory', async (req, res) => {
     }
 } )
 
+app.post('/image', async (req, res) => {
+    
+})
+
 
