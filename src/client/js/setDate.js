@@ -15,6 +15,8 @@ function setDate(){
     }
 
     document.getElementById('date').min = minDate
+
+    
 }
 
 export{setDate}

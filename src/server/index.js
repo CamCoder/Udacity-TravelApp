@@ -49,4 +49,17 @@ app.post('/weather', async (req, res) => {
     }
 } )
 
+app.post('/weatherHistory', async (req, res) => {
+
+    console.log(req.body.date);
+    console.log(req.body.date2);
+    const response = await fetch(`https://api.weatherbit.io/v2.0/history/daily?lat=${req.body.lat}&lon=${req.body.lng}&units=I&start_date=${req.body.date}&end_date=${req.body.date2}&key=${WBIT_KEY}`);
+    try {
+        const data = await response.json();
+        res.send(data)
+    } catch (error) {
+        console.log("Error: ", error)
+    }
+} )
+
 

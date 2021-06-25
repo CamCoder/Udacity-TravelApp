@@ -1,3 +1,5 @@
+import { addToLocalStorageArray } from "./addToLocalStorage";
+
 function handleDate(d){
 
     const currentDate = document.getElementById('date').min;
@@ -14,11 +16,28 @@ function handleDate(d){
 
     console.log(Difference_In_Days)
 
-    if(Difference_In_Days <= 7){
-        console.log("Within a Week");
+    let histroyDate = newDate.getFullYear()-1
+
+    if(newDate.getMonth()+1 < 10){
+        histroyDate = histroyDate + "-0" + (newDate.getMonth()+1);
     }else{
-        console.log("Next week");
+        histroyDate = histroyDate + "-" + (newDate.getMonth()+1);
     }
+    if(newDate.getDate()+1 < 10){
+        histroyDate = histroyDate + "-0" + (newDate.getDate()+1);
+    }else{
+        histroyDate = histroyDate + "-" + (newDate.getDate()+1);
+
+    }
+
+
+
+    localStorage.setItem(tripCount, [ Difference_In_Days] );
+    addToLocalStorageArray(tripCount,[histroyDate]);
+    addToLocalStorageArray(tripCount,[tripDate]);
+
+    // localStorage.setItem(tripCount, [ Difference_In_Days] );
+    
     
 
 }

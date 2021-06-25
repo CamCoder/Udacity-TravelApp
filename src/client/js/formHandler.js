@@ -1,12 +1,10 @@
+import { addToLocalStorageArray } from "./addToLocalStorage";
 import { handleDate } from "./dateHandler";
 import { getWeather } from "./getWeather";
 import { tripList } from "./tripList";
 
 function handleSubmit(event) {
     event.preventDefault()
-
-    
-
 }
 
 document.getElementById('submit').addEventListener('click', getInfo);
@@ -45,13 +43,17 @@ function getInfo(){
             handleDate(date);
 
             if(res.geonames[0].countryCode == "US"){
-                localStorage.setItem(tripCount++,[ res.geonames[0].toponymName,
-                res.geonames[0].adminName1, res.geonames[0].countryName])
+                addToLocalStorageArray(tripCount,[ res.geonames[0].toponymName,
+                    res.geonames[0].adminName1, res.geonames[0].countryName]);
+
+                // localStorage.setItem(tripCount,[ res.geonames[0].toponymName,
+                // res.geonames[0].adminName1, res.geonames[0].countryName])
             }else{
-                localStorage.setItem(tripCount++, [ res.geonames[0].toponymName, res.geonames[0].countryName] )
+                addToLocalStorageArray(tripCount, [ res.geonames[0].toponymName, res.geonames[0].countryName])
+                // localStorage.setItem(tripCount, [ res.geonames[0].toponymName, res.geonames[0].countryName] )
             }
 
-            
+                    
             getWeather(res.geonames[0].lat,res.geonames[0].lng);
 
 
