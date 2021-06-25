@@ -1,3 +1,5 @@
+import { addToLocalStorageArray } from "./addToLocalStorage"
+
 function getWeather(lat, lng){
 
     fetch('http://localhost:8082/weather',{
@@ -12,7 +14,7 @@ function getWeather(lat, lng){
     .then(function(res){
         
         console.log("NEW:")
-        console.log(res)
+        console.log(res.data)
         // console.log(res.geonames[0].lng)
 
 

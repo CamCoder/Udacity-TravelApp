@@ -1,0 +1,41 @@
+@use './custom' as *;
+@use './mixins' as *;
+
+.card{
+    width: 600px;
+    height: 400px;
+    @include gradient;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.card-top{
+width: 100%;
+height: 60%;
+display: flex;
+margin-bottom: -1px;
+}
+
+.card-img{
+width: 40%;
+height: 100%;
+background: red;
+}
+
+.card-info{
+width: 60%;
+height: 100%;
+background: white;
+}
+
+.card-weather{
+    height: 50%;
+    width: 100%;
+    background: white;
+
+
+}
+
+#tripList{
+    grid-gap: 2rem;
+}

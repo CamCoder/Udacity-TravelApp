@@ -52,7 +52,7 @@ function getInfo(){
             }
 
             
-            // getWeather(res.geonames[0].lat,res.geonames[0].lng);
+            getWeather(res.geonames[0].lat,res.geonames[0].lng);
 
 
 
