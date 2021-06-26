@@ -30,52 +30,12 @@ function getInfo(){
         const date = document.getElementById('date').value; 
 
         handleDate(date)
-        // getCord(loc);
         generateEntry(loc);
-
-        // fetch('http://localhost:8082/travel',{
-        //     method: 'POST', 
-        //     credentials: 'same-origin',
-        //     headers: {
-        //         'Content-Type': 'application/json',
-        //     },      
-        //     body: JSON.stringify({loc}), 
-        // })
-        // .then(res => res.json())
-        // .then(function(res){
-        //     handleDate(date);
-        //     console.log("date: ", date);
-
-            // if(res.geonames[0].countryCode == "US"){
-            //     addToLocalStorageArray(tripCount,[ res.geonames[0].toponymName,
-            //         res.geonames[0].adminName1]);
-
-            //     // localStorage.setItem(tripCount,[ res.geonames[0].toponymName,
-            //     // res.geonames[0].adminName1, res.geonames[0].countryName])
-            // }else{
-            //     addToLocalStorageArray(tripCount, [ res.geonames[0].toponymName, res.geonames[0].countryName])
-            //     // localStorage.setItem(tripCount, [ res.geonames[0].toponymName, res.geonames[0].countryName] )
-            // }
-
-                    
-            // getWeather(res.geonames[0].lat,res.geonames[0].lng);
-
-
-
-        // })
-        
-
 
         // reset input fields
         document.getElementById('destination').value = '';
         document.getElementById('date').value = '';
     }
-
-
-
-
 }
-
-
 
 export {handleSubmit};
