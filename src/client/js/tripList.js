@@ -32,7 +32,7 @@ function tripList(){
     // cardImg.innerHTML = `<img src="${localStorage.getItem(tripCount).split(',')[localStorage.getItem('1').split(',').length-1]}" alt="location img>`;
     // cardImg.innerHTML = `<img src="${localStorage.getItem(tripCount).split(',')[localStorage.getItem(tripCount).split(',').length-1]}" alt="location img>`;
     // console.log("URL current:     ",localStorage.getItem(tripCount).split(',')[localStorage.getItem(tripCount).split(',').length-1])
-    console.log(img);
+    // console.log(img);
 
     cardInfo.innerHTML = `<p> My Escape to: ${localStorage.getItem(tripCount).split(',')[3]}, ${localStorage.getItem(tripCount).split(',')[4]} </p>`;
     cardInfo.innerHTML += `<p> Departing: ${localStorage.getItem(tripCount).split(',')[2]} </p>`
@@ -40,6 +40,7 @@ function tripList(){
 
     if(Difference_In_Days <= 7){
         weatherList.setAttribute('class', "weather-list");
+        cardWeather.innerHTML = "<h4> 7 day forecast </h4>"
         const week = localStorage.getItem(tripCount).split(',').slice(5,26)
 
         for(let x = 0; x<21;  x=x+3){
@@ -54,6 +55,10 @@ function tripList(){
         }
     }
     else{
+        cardWeather.innerHTML = "<h4> Typical weather for then: </h4>"
+        // 5 and 6
+        weatherList.setAttribute('class', "weather-history");
+        weatherList.innerHTML = `<p> Average temp of ${localStorage.getItem(tripCount).split(',')[5]} with a likely weather of ${localStorage.getItem(tripCount).split(',')[6]} </p> `
         
     }
 
@@ -66,7 +71,6 @@ function tripList(){
     cardImg.appendChild(img)
     cardTop.appendChild(cardImg);
     cardTop.appendChild(cardInfo);
-    cardWeather.innerHTML = "<h4> 7 day forecast </h4>"
     cardWeather.appendChild(weatherList);
     card.appendChild(cardTop);
     card.appendChild(cardWeather);
