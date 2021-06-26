@@ -1,4 +1,3 @@
-import { param } from "jquery";
 import { tripList } from "./tripList";
 
 // API URL AND KEYS
