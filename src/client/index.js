@@ -1,7 +1,7 @@
 import {handleSubmit} from './js/formHandler';
 import { handleDate } from './js/dateHandler';
 import { setDate } from './js/setDate';
-import { loadTrip } from './js/loadTrip';
+import { loadTrip } from './js/app';
 import { tripList } from './js/tripList';
 import { addToLocalStorageArray } from './js/addToLocalStorage';
 
