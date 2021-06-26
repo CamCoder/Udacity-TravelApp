@@ -14,7 +14,6 @@ function handleDate(d){
     // To calculate the no. of days between two dates
     const Difference_In_Days = (Difference_In_Time / (1000 * 3600 * 24)) + 1;
 
-    console.log(Difference_In_Days)
 
     let histroyDate = newDate.getFullYear()-1
 

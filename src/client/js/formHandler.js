@@ -1,7 +1,8 @@
 import { addToLocalStorageArray } from "./addToLocalStorage";
 import { handleDate } from "./dateHandler";
-import { getWeather } from "./getWeather";
+// import { getWeather } from "./getWeather";
 import { tripList } from "./tripList";
+import {generateEntry} from "./app"
 
 function handleSubmit(event) {
     event.preventDefault()
@@ -28,38 +29,40 @@ function getInfo(){
         const loc = document.getElementById('destination').value;
         const date = document.getElementById('date').value; 
 
-        
+        handleDate(date)
+        // getCord(loc);
+        generateEntry(loc);
 
-        fetch('http://localhost:8082/travel',{
-            method: 'POST', 
-            credentials: 'same-origin',
-            headers: {
-                'Content-Type': 'application/json',
-            },      
-            body: JSON.stringify({loc}), 
-        })
-        .then(res => res.json())
-        .then(function(res){
-            handleDate(date);
-            console.log("date: ", date);
+        // fetch('http://localhost:8082/travel',{
+        //     method: 'POST', 
+        //     credentials: 'same-origin',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //     },      
+        //     body: JSON.stringify({loc}), 
+        // })
+        // .then(res => res.json())
+        // .then(function(res){
+        //     handleDate(date);
+        //     console.log("date: ", date);
 
-            if(res.geonames[0].countryCode == "US"){
-                addToLocalStorageArray(tripCount,[ res.geonames[0].toponymName,
-                    res.geonames[0].adminName1]);
+            // if(res.geonames[0].countryCode == "US"){
+            //     addToLocalStorageArray(tripCount,[ res.geonames[0].toponymName,
+            //         res.geonames[0].adminName1]);
 
-                // localStorage.setItem(tripCount,[ res.geonames[0].toponymName,
-                // res.geonames[0].adminName1, res.geonames[0].countryName])
-            }else{
-                addToLocalStorageArray(tripCount, [ res.geonames[0].toponymName, res.geonames[0].countryName])
-                // localStorage.setItem(tripCount, [ res.geonames[0].toponymName, res.geonames[0].countryName] )
-            }
+            //     // localStorage.setItem(tripCount,[ res.geonames[0].toponymName,
+            //     // res.geonames[0].adminName1, res.geonames[0].countryName])
+            // }else{
+            //     addToLocalStorageArray(tripCount, [ res.geonames[0].toponymName, res.geonames[0].countryName])
+            //     // localStorage.setItem(tripCount, [ res.geonames[0].toponymName, res.geonames[0].countryName] )
+            // }
 
                     
-            getWeather(res.geonames[0].lat,res.geonames[0].lng);
+            // getWeather(res.geonames[0].lat,res.geonames[0].lng);
 
 
 
-        })
+        // })
         
 
 
