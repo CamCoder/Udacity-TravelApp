@@ -1,4 +1,4 @@
-import { addToLocalStorageArray } from "./addToLocalStorage";
+import { addToLocalStorageArray } from "./app";
 
 function handleDate(d){
 
@@ -29,16 +29,9 @@ function handleDate(d){
 
     }
 
-
-
     localStorage.setItem(tripCount, [ Difference_In_Days] );
     addToLocalStorageArray(tripCount,[histroyDate]);
     addToLocalStorageArray(tripCount,[tripDate]);
-
-    // localStorage.setItem(tripCount, [ Difference_In_Days] );
-    
-    
-
 }
 
 

@@ -1,4 +1,3 @@
-import { data } from "autoprefixer";
 import { tripList } from "./tripList";
 
 // API URL AND KEYS
@@ -10,12 +9,9 @@ const WBIT_KEY = '42ae3f3d6c05424e9b64eaad82e0c8c7';
 const pixURL ="https://pixabay.com/api/?key=";
 const PIX_KEY = '22240298-415423148879f96b44082537c';
 
-// global var
-// let country_code = '';
-
 
 //  Add an item to a localStorage() array
-function addToLocalStorageArray(name, value) {
+export function addToLocalStorageArray(name, value) {
 
 	// Get the existing data
 	var existing = localStorage.getItem(name);
@@ -98,9 +94,7 @@ const getWeather = async (lat, lng) => {
     }
 
 
-
-    console.log(`Day: ${today}. After: ${dayAfter}`);
-
+    // if trip within 7 days get forecast
     if(localStorage.getItem(tripCount).split(',')[0] <= 7){
 
         const res = await fetch(forecastURL+lat+'&lon='+lng+'&units=I&days=7&key='+WBIT_KEY)
@@ -114,8 +108,8 @@ const getWeather = async (lat, lng) => {
             console.log(error)
         }     
     }
+    // else get weather from trip date but 1 year ago
     else{
-
         const res = await fetch(historyURL +lat+'&lon='+lng+'&units=I&start_date='+today+'&end_date='+dayAfter+'&tz=local&key='+WBIT_KEY)
         try {
             const historyData = await res.json();
@@ -124,26 +118,7 @@ const getWeather = async (lat, lng) => {
             console.log(error)
         }
 
-    }
-
-    // else{
-    //     fetch('http://localhost:8082/weatherHistory',{
-    //         method: 'POST', 
-    //         credentials: 'same-origin',
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //         },      
-    //         body: JSON.stringify({lat,lng, date, date2}), 
-    //     })     
-    //     .then(res => res.json())
-    //     .then(function(res){
-            
-    //         console.log("History:")
-    //         console.log(res)
-    //         // tripList();
-    //     })
-    
-
+    }    
 }
 
 // Get image of location

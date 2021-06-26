@@ -11,7 +11,6 @@ function setDate(){
         minDate = minDate + "-0" + (d.getDate()+1);
     }else{
         minDate = minDate + "-" + (d.getDate()+1);
-
     }
 
     document.getElementById('date').min = minDate

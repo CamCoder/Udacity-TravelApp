@@ -1,7 +1,4 @@
-import { addToLocalStorageArray } from "./addToLocalStorage";
 import { handleDate } from "./dateHandler";
-// import { getWeather } from "./getWeather";
-import { tripList } from "./tripList";
 import {generateEntry} from "./app"
 
 function handleSubmit(event) {

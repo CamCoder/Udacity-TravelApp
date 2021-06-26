@@ -28,12 +28,6 @@ function tripList(){
     const Difference_In_Time = tripDate.getTime() - todayDate.getTime();
     const Difference_In_Days = (Difference_In_Time / (1000 * 3600 * 24)) + 1;
 
-    // cardImg.innerHTML = `<img src="${localStorage.getItem(tripCount).split(',')[localStorage.getItem('1').split(',').length-1]}" alt="location img>`;
-    // cardImg.innerHTML = `<img src="${localStorage.getItem(tripCount).split(',')[localStorage.getItem('1').split(',').length-1]}" alt="location img>`;
-    // cardImg.innerHTML = `<img src="${localStorage.getItem(tripCount).split(',')[localStorage.getItem(tripCount).split(',').length-1]}" alt="location img>`;
-    // console.log("URL current:     ",localStorage.getItem(tripCount).split(',')[localStorage.getItem(tripCount).split(',').length-1])
-    // console.log(img);
-
     cardInfo.innerHTML = `<p> My Escape to: ${localStorage.getItem(tripCount).split(',')[3]}, ${localStorage.getItem(tripCount).split(',')[4]} </p>`;
     cardInfo.innerHTML += `<p> Departing: ${localStorage.getItem(tripCount).split(',')[2]} </p>`
     cardInfo.innerHTML += `<p> Your escape is ${Difference_In_Days} days away</p>`
@@ -62,12 +56,6 @@ function tripList(){
         
     }
 
-
-    // }else{
-        // cardWeather.innerHTML = 
-    // }
-
-
     cardImg.appendChild(img)
     cardTop.appendChild(cardImg);
     cardTop.appendChild(cardInfo);
@@ -76,8 +64,6 @@ function tripList(){
     card.appendChild(cardWeather);
     list.appendChild(card);
 
-    // console.log("URL, ",localStorage.getItem(tripCount).split(',')[localStorage.getItem(tripCount).split(',').length])
-    // console.log("URL, ",localStorage.getItem(tripCount).split(','))
     tripCount++
 }
 
