@@ -14,6 +14,10 @@ const PIX_KEY = '22240298-415423148879f96b44082537c';
 // load existing trips
 export function loadTrip(){
 
+    if(localStorage.getItem('tripCount') > 0){
+        document.getElementById('btn-clear').style.display = "initial";
+    }
+
     const list = document.getElementById('tripList');
 
     const card = document.createElement('div')

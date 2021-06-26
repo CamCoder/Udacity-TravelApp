@@ -1,6 +1,9 @@
 
 function tripList(){
 
+    if(tripCount > 0){
+        document.getElementById('btn-clear').style.display = "initial";
+    }
     tripCount--
 
     const list = document.getElementById('tripList');

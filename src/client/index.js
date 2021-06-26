@@ -4,7 +4,7 @@ import { setDate } from './js/setDate';
 import { loadTrip } from './js/app';
 import { tripList } from './js/tripList';
 import { addToLocalStorageArray } from './js/addToLocalStorage';
-
+import { clearLocalData } from './js/clearStorage';
 // import "./js/app";
 
 import "./styles/main.scss";
@@ -20,12 +20,12 @@ for(let x = 0; x<localStorage.getItem('tripCount'); x++){
     loadTrip();
 }
 
-
+document.getElementById('btn-clear').style.display = "none";
 
 
 export { handleSubmit };
 export {handleDate};
 export {setDate};
-// export {getWeather};
+export {clearLocalData}
 export {tripList};
 export {addToLocalStorageArray}
