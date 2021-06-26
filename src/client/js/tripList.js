@@ -1,9 +1,6 @@
 
 function tripList(){
 
-
-    // console.log('Last2')
-    // console.log("NEW :",localStorage.getItem(tripCount-1).split(','))
     tripCount--
 
     const list = document.getElementById('tripList');
@@ -38,8 +35,8 @@ function tripList(){
     console.log(img);
 
     cardInfo.innerHTML = `<p> My Escape to: ${localStorage.getItem(tripCount).split(',')[3]}, ${localStorage.getItem(tripCount).split(',')[4]} </p>`;
-    cardInfo.innerHTML = cardInfo.innerHTML + `<p> Departing: ${localStorage.getItem(tripCount).split(',')[2]} </p>`
-    cardInfo.innerHTML = cardInfo.innerHTML + `<p> Your escape is ${Difference_In_Days} days away</p>`
+    cardInfo.innerHTML += `<p> Departing: ${localStorage.getItem(tripCount).split(',')[2]} </p>`
+    cardInfo.innerHTML += `<p> Your escape is ${Difference_In_Days} days away</p>`
 
     if(Difference_In_Days <= 7){
         weatherList.setAttribute('class', "weather-list");
@@ -50,8 +47,8 @@ function tripList(){
         const forecast = document.createElement('div')
         forecast.setAttribute('class',"forecast")
         forecast.innerHTML = `<img src="https://www.weatherbit.io/static/img/icons/${week[x]}.png" alt="weather icon">`;
-        forecast.innerHTML = forecast.innerHTML + `<p>H - ${week[x+1]}</p>`;
-        forecast.innerHTML = forecast.innerHTML + `<p>L - ${week[x+2]}</p>`;
+        forecast.innerHTML += `<p>H - ${week[x+1]}</p>`;
+        forecast.innerHTML += `<p>L - ${week[x+2]}</p>`;
 
         weatherList.appendChild(forecast)
         }
