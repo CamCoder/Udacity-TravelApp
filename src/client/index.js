@@ -20,7 +20,12 @@ for(let x = 0; x<localStorage.getItem('tripCount'); x++){
     loadTrip();
 }
 
-document.getElementById('btn-clear').style.display = "none";
+if(localStorage.getItem('tripCount') > 0){
+    document.getElementById('btn-clear').style.display = "initial";
+}else{
+    document.getElementById('btn-clear').style.display = "none";
+
+}
 
 
 export { handleSubmit };
