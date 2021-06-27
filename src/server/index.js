@@ -22,4 +22,3 @@ app.listen(8082, function () {
     console.log('App listening on port 8082!')
 })
 
-module.exports = app
