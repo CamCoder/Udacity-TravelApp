@@ -5,7 +5,6 @@ import { loadTrip } from './js/app';
 import { tripList } from './js/tripList';
 import { addToLocalStorageArray } from './js/addToLocalStorage';
 import { clearLocalData } from './js/clearStorage';
-// import "./js/app";
 
 import "./styles/main.scss";
 
