@@ -5,9 +5,9 @@
     .container{
         background: $white;
         margin-bottom: 5rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
     }
 }
 
@@ -21,11 +21,9 @@
 
 .card-img{
     width: 40%;
-    height: 100%;
     background: black;
     img{
-        object-position: center;
-        overflow: hidden;
+        object-fit: cover;
         width: 100%;
         height: 100%;
     }
@@ -60,19 +58,12 @@
 #tripList{
     grid-gap: 2rem;
     .card{
-        width: 600px;
-        height: 400px;
+        width: 100%;
+        height: 100%;
         @include gradient;
         border-top: 0;
         border-bottom: 0;
     }
-}
-
-#exit{
-    position: absolute;
-    top: 0;
-    right: 15px;
-    font-size: 3rem;
 }
 
 .forecast{
