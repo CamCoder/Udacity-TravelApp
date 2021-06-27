@@ -8,4 +8,10 @@
 * Workbox
 * Express
 
+### How To Run
+* Clone repo
+* npm init
+* npm run build-prod
+* npm start
+* Go to http://localhost:8082/
 
