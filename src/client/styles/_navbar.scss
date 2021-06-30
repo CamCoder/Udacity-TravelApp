@@ -1,10 +1,19 @@
 // @use './custom' as *;
+@use './mixins' as *;
 
 .nav-custom{
-    background: linear-gradient(to right, rgba($primary,0.95), rgba($secondary,0.95));
+    @include gradient;
+    position: fixed;
+    width: 100vw;
+    // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
     div{
+        // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
         .logo-custom{
+            
+            padding: 1rem;
+            font-size: 3rem;
             color: white;
             &:hover {
                 color: white;

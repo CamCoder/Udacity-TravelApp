@@ -7,13 +7,14 @@
   <title>Escape | Travel App</title>
 
   <!-- FontAwesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+  <link rel="stylesheet" href="../styles/main.scss">
 </head>
-<body>
+<body style="margin: 0;">
   <!-- START NAVBAR SECTION -->
   <!-- As a heading -->
   <nav class="navbar navbar-light nav-custom shadow fixed-top">
-    <div class="container-fluid">
+    <div class="container">
       <span class="navbar-brand mb-0 h1 logo-custom">Escape</span>
     </div>
   </nav>
@@ -83,7 +84,7 @@
   <!-- END TRIPS SECTION -->
 
   <!-- Service Worker -->
-  <script>
+  <!-- <script>
     // Check that service workers are supported
     if ('serviceWorker' in navigator) {
         // Use the window load event to keep the page load performant
@@ -91,6 +92,6 @@
             navigator.serviceWorker.register('/service-worker.js');
         });
     }
-    </script>
+    </script> -->
 </body>
 </html>
