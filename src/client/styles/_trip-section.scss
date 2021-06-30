@@ -1,9 +1,9 @@
-@use './custom' as *;
+// @use './custom' as *;
 @use './mixins' as *;
 
 #history{
     .container{
-        background: $white;
+        background: white;
         margin-bottom: 5rem;
         // display: flex;
         // flex-direction: column;
@@ -103,7 +103,7 @@
 
 #btn-clear{
     @include gradient;
-    color: $white;
+    color: white;
     margin-top: 3rem;
 
 }

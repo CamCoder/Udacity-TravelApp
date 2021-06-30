@@ -1,13 +1,13 @@
-@use './custom' as *;
+// @use './custom' as *;
 
 .nav-custom{
     background: linear-gradient(to right, rgba($primary,0.95), rgba($secondary,0.95));
 
     div{
         .logo-custom{
-            color: $white;
+            color: white;
             &:hover {
-                color: $white;
+                color: white;
             }
         }
     }

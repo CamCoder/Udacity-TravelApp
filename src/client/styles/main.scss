@@ -1,5 +1,5 @@
-@use './custom' as *;
-@forward "~bootstrap" ;
+// @use './custom' as *;
+// @forward "~bootstrap" ;
 // with(
 //     $primary: $primary
 // );
@@ -15,5 +15,5 @@
 @use './trip-section';
 
 body{
-    background-color: $gray-200;
+    background-color: gray;
 }

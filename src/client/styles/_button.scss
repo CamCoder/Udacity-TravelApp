@@ -1,4 +1,4 @@
-@use './custom' as *;
+// @use './custom' as *;
 @use './mixins' as *;
 
 .btn-rounded {
@@ -13,7 +13,7 @@
     margin-top: 3rem;
     &:hover {
         @include gradient;
-        color: $white;
+        color: white;
     }
 }
 
