@@ -41,9 +41,8 @@ module.exports = {
             cleanStaleWebpackAssets: true,
             protectWebpackAssets: false
         }),
-        // new WorkboxPlugin.GenerateSW(),
-        new MiniCssExtractPlugin({ filename: "[name].css" }),
         new WorkboxPlugin.GenerateSW(),
+        new MiniCssExtractPlugin({ filename: "[name].css" }),
         
     ],     
 }
