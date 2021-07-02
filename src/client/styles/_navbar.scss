@@ -1,17 +1,13 @@
-// @use './custom' as *;
+// Nav finished 7/1/21
 @use './mixins' as *;
 
 .nav-custom{
     @include gradient;
     position: fixed;
     width: 100vw;
-    // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
     div{
-        // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+        padding: .5rem;
         .logo-custom{
-            
             padding: 1rem;
             font-size: 3rem;
             color: white;
